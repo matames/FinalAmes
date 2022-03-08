@@ -9,7 +9,8 @@ public class FingerSelector : MonoBehaviour
 
     [SerializeField]
     private List<SpriteRenderer> fingers = new List<SpriteRenderer>();
-    // Start is called before the first frame update
+    //list of fingers and their sprite renderers
+
     private int currentOption = 0;
     [SerializeField]
     private Vector3 startpos;
@@ -24,18 +25,22 @@ public class FingerSelector : MonoBehaviour
 
     private void Update()
     {
+        //this code is similar to the next and previous button code but
+        //cannibalized for the finger minigame instead
 
+        //arrow movement controls
 
         if (Input.GetKeyDown(KeyCode.RightArrow)) 
         {
             this.transform.position = this.transform.position + new Vector3(2, 0, 0);
+            //move the arrow when you press the arrow keys
 
             currentOption++;
 
             if (currentOption >= fingers.Count)
             {
                 currentOption = 0; //Reset if cycled through entire list
-                this.transform.position = startpos;
+                this.transform.position = startpos; //go to the first position
             }
             
         }
@@ -56,7 +61,8 @@ public class FingerSelector : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
           
-           
+            //change the finger to painted that the arrow is currently hovering over
+
                fingers[currentOption].sprite = fingerpainted;
             
         }

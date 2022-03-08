@@ -6,6 +6,8 @@ public class AntennaControl : MonoBehaviour
 {
     private float degreesPerSecond = 100;
 
+    //different levels of opacity for the static
+
     public Color targetColor = new Color(1f, 1f, 1f, 0f);
 
     public Color targetColor2 = new Color(1f, 1f, 1f, .5f);
@@ -15,17 +17,17 @@ public class AntennaControl : MonoBehaviour
     [SerializeField]
     private SpriteRenderer spriteRenderer;
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(LerpFunction(startcolor, 2));
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //antenna movement
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow)) //the antenna rotates left when left arrow is held
+                                             //and right when the right arrow is held
         {
             this.transform.Rotate(new Vector3(0, 0, degreesPerSecond) * Time.deltaTime);
         }
@@ -37,6 +39,8 @@ public class AntennaControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //when the antenna hits a signal the opacity of the static lowers
+    
         if (collision.tag == "Signal")
         {
             StopAllCoroutines();
@@ -50,10 +54,10 @@ public class AntennaControl : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+         //when the antenna exits a signal the static opacity goes back to 100%
+        
         StopAllCoroutines();
-        Debug.Log("triggerexit");
         StartCoroutine(LerpFunction(startcolor, 2));
-        //spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
 }
 
     IEnumerator LerpFunction(Color endValue, float duration)
@@ -67,6 +71,5 @@ public class AntennaControl : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        //spriteRenderer.color = endValue;
     }
 }

@@ -14,18 +14,21 @@ public class BodySplit : MonoBehaviour
 
     private void Start()
     {
+        //body starts moving apart
         co1 = StartCoroutine(Vector3LerpCoroutine(gameObject, targetPosition, speed));
     }
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+        //body movement controls
+
+        if (Input.GetKeyDown(KeyCode.UpArrow)) { //if you press up the body goes back together
             StopCoroutine(co1);
             co2 = StartCoroutine(Vector3LerpCoroutine(gameObject, startPosition, speed));
                 
         }
-        if (Input.GetKeyUp(KeyCode.UpArrow))
+        if (Input.GetKeyUp(KeyCode.UpArrow)) //if you stop holding up it goes apart again
         {
             StopCoroutine(co2);
             co1 = StartCoroutine(Vector3LerpCoroutine(gameObject, targetPosition, speed));

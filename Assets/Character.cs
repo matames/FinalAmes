@@ -17,27 +17,20 @@ public class Character : MonoBehaviour
     [SerializeField]
     private SceneInfo sceneInfo;
 
-    public static Character Instance;
-
-
 
     private Rigidbody2D MyRigidBody2D;
 
-    // Start is called before the first frame update
     void Start()
     {
         Hair.sprite = sceneInfo.headSprite; //set sprites to the last saved sprite in the sceneinfo
         Face.sprite = sceneInfo.faceSprite;
         Nails.sprite = sceneInfo.nailsSprite;
-
-        
-        MyRigidBody2D = GetComponent<Rigidbody2D>();
     }
 
     public void SetSprites()
     {
-        sceneInfo.nailsSprite = Nails.sprite;
+        sceneInfo.nailsSprite = Nails.sprite; //set the sprites in sceneinfo when confirmed
         sceneInfo.faceSprite = Face.sprite;
-        sceneInfo.headSprite = Hair.sprite; //set the sprites in sceneinfo when confirmed
+        sceneInfo.headSprite = Hair.sprite; 
     }
 }

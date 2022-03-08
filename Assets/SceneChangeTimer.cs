@@ -36,6 +36,6 @@ public class SceneChangeTimer : MonoBehaviour
 
     void timerEnded()
     { 
-        SceneManager.LoadScene(sceneBuildIndex: sceneNum);
+        SceneManager.LoadScene(sceneBuildIndex: sceneNum); //go back to first screen when timer ends
     }
 }
