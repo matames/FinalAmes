@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGame3_Hand.unity
     guid: 196683c238ea9440cb5b7ae42e118c23
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 70d1e0cc35a7d4b1d84a44a5407989b4
   m_configObjects: {}

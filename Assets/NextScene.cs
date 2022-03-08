@@ -11,16 +11,17 @@ public class NextScene : MonoBehaviour
 
 public void SceneChange()
     {
-        //int Scenenum = SceneManager.GetActiveScene().buildIndex;
-        //Debug.Log(Scenenum);
         SceneManager.LoadScene(sceneBuildIndex: scenenum);
         
     }
 public void SceneChangeBack()
     {
-        //int Scenenum = SceneManager.GetActiveScene().buildIndex;
-        //Debug.Log(scenenum);
         SceneManager.LoadScene(sceneBuildIndex: 0);
         
+    }
+
+public void Ending()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 4);
     }
 }

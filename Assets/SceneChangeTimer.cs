@@ -7,6 +7,8 @@ public class SceneChangeTimer : MonoBehaviour
 {
     public float targetTime = 60.0f;
     private bool keyPressed = false;
+    [SerializeField]
+    private int sceneNum = 0;
 
     private void Update() 
     {
@@ -33,9 +35,7 @@ public class SceneChangeTimer : MonoBehaviour
     }
 
     void timerEnded()
-    {
-        //int Scenenum = SceneManager.GetActiveScene().buildIndex;
-        //Debug.Log(Scenenum);
-        SceneManager.LoadScene(sceneBuildIndex: 0);
+    { 
+        SceneManager.LoadScene(sceneBuildIndex: sceneNum);
     }
 }

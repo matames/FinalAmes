@@ -23,17 +23,6 @@ public class Character : MonoBehaviour
 
     private Rigidbody2D MyRigidBody2D;
 
-    private void Awake()
-    {
-       /* 
-        if(Instance != null)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-       */
-    }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -43,8 +32,6 @@ public class Character : MonoBehaviour
 
         
         MyRigidBody2D = GetComponent<Rigidbody2D>();
-
-        //GameObject.DontDestroyOnLoad(this.gameObject);
     }
 
     public void SetSprites()

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b245ad973654417b86137c18a352b4e, type: 3}
   m_Name: SceneInfo
   m_EditorClassIdentifier: 
-  headSprite: {fileID: -618716408, guid: d0a6e6f89f0bd43d4b913f6a499a6e03, type: 3}
-  faceSprite: {fileID: -1293741643, guid: 4ff780005a8014bb0a4647b3f810b10c, type: 3}
-  nailsSprite: {fileID: 21300000, guid: a67067aad63e34eccbc68ea76661ba63, type: 3}
+  headSprite: {fileID: -916261009, guid: d0a6e6f89f0bd43d4b913f6a499a6e03, type: 3}
+  faceSprite: {fileID: 547493323, guid: 4ff780005a8014bb0a4647b3f810b10c, type: 3}
+  nailsSprite: {fileID: 21300000, guid: c7d21b19d4d564343aa72770a0b0da1d, type: 3}
