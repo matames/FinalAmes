@@ -1304,6 +1304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTime: 10
+  sceneNum: 6
 --- !u!4 &1775000045
 Transform:
   m_ObjectHideFlags: 0

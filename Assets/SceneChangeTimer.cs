@@ -22,6 +22,12 @@ public class SceneChangeTimer : MonoBehaviour
             keyPressed = true;
         }
 
+        if (Input.GetKeyDown(KeyCode.Mouse0)) { 
+
+            keyPressed = true;
+
+        }
+
         if (keyPressed)
         {
             targetTime -= Time.deltaTime;
