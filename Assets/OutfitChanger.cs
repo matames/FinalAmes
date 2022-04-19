@@ -19,16 +19,26 @@ public class OutfitChanger : MonoBehaviour
     private Button PreviousButton;
 
     [SerializeField]
-    private SceneInfo sceneInfo;
+    private GameObject Character;
 
     [SerializeField]
-    private GameObject Character;
+    private string bodyPartName;
 
     //Prevous and next button functions
     //based on code used here
     //https://www.youtube.com/watch?v=kAPIWJJ6NQI&ab_channel=BMo
 
-    private int currentOption = 0;
+    [SerializeField]
+    private int currentOption;
+
+    [SerializeField]
+    private int savedSprite;
+
+    private void Awake()
+    {
+        savedSprite = PlayerPrefs.GetInt(bodyPartName);
+        bodyPart.sprite = options[savedSprite];
+    }
 
     public void NextOption()
     {
@@ -52,7 +62,10 @@ public class OutfitChanger : MonoBehaviour
     
     public void ConfirmOption() 
     {
-        Character.GetComponent<Character>().SetSprites(); //set the sprites in Character
+        PlayerPrefs.SetInt(bodyPartName, currentOption);
+        PlayerPrefs.Save();
+
+        // Character.GetComponent<Character>().SetSprites(); //set the sprites in Character
 
         //** This next part doesn't fully work but when I continue to work on
         //it this will grey out the previous and next buttons once you hit confirm**//

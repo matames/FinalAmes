@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Character
   - Signal
+  - Floor
   layers:
   - Default
   - TransparentFX

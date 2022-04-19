@@ -38,6 +38,8 @@ public class SceneChangeTimer : MonoBehaviour
             }
         }
 
+        Debug.Log(PlayerPrefs.GetInt("nails"));
+
     }
 
     void timerEnded()

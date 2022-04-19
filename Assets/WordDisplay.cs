@@ -54,4 +54,12 @@ public class WordDisplay : MonoBehaviour
         transform.Translate(0f, -randomSpeed * Time.deltaTime, 0f);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Floor")
+        {
+            
+            SceneManager.LoadScene(sceneBuildIndex: 0);
+        }
+    }
 }

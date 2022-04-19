@@ -969,5 +969,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square
       objectReference: {fileID: 0}
+    - target: {fileID: 2327613936078609144, guid: 1576ab1a4ed2844828996ae7faf17d3a, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1576ab1a4ed2844828996ae7faf17d3a, type: 3}
