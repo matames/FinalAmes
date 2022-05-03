@@ -46,6 +46,7 @@ public class WordDisplay : MonoBehaviour
     {
         sprite.enabled = false;
         text.enabled = false;
+        Destroy(gameObject.GetComponent<BoxCollider2D>());
         //Destroy(gameObject);
     }
 
@@ -58,7 +59,6 @@ public class WordDisplay : MonoBehaviour
     {
         if (collision.tag == "Floor")
         {
-            
             SceneManager.LoadScene(sceneBuildIndex: 0);
         }
     }

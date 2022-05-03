@@ -25,7 +25,7 @@ public class BodySplit : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow)) { //if you press up the body goes back together
             StopCoroutine(co1);
-            co2 = StartCoroutine(Vector3LerpCoroutine(gameObject, startPosition, speed));
+            co2 = StartCoroutine(Vector3LerpCoroutine(gameObject, startPosition, speed*8));
                 
         }
         if (Input.GetKeyUp(KeyCode.UpArrow)) //if you stop holding up it goes apart again

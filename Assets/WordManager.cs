@@ -11,10 +11,16 @@ public class WordManager : MonoBehaviour
     private bool hasActiveWord;
     private Word activeWord;
 
-    private void Start()
+    private bool UIcontrols = true;
+    [SerializeField]
+    private GameObject controls;
+
+
+    private void Update()
     {
+      controls.SetActive(UIcontrols);
         
-    } 
+    }
 
     public void AddWord()
     {
@@ -33,6 +39,10 @@ public class WordManager : MonoBehaviour
             if (activeWord.GetNextLetter() == letter)
             {
                 activeWord.TypeLetter();
+                if (UIcontrols == true)
+                {
+                    UIcontrols = false;
+                }
             }
         }
         else

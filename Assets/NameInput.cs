@@ -23,7 +23,7 @@ public class NameInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nameofPlayer = PlayerPrefs.GetString("name", "none");
+        nameofPlayer = PlayerPrefs.GetString("name", "your name here");
         loadedName.text = nameofPlayer;
     }
 

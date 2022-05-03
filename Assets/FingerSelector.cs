@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class FingerSelector : MonoBehaviour
 {
-    [SerializeField]
-    private Sprite fingerpainted;
+    
+
+
+    private Sprite fingerPainted;
 
     [SerializeField]
     private List<SpriteRenderer> fingers = new List<SpriteRenderer>();
@@ -18,9 +20,13 @@ public class FingerSelector : MonoBehaviour
     [SerializeField]
     private Vector3 endpos;
 
+   public List<Sprite> fingerPaint = new List<Sprite>();
+
     private void Start()
     {
         this.transform.position = startpos;
+        fingerPainted = fingerPaint[PlayerPrefs.GetInt("nails")];
+
     }
 
     private void Update()
@@ -63,7 +69,7 @@ public class FingerSelector : MonoBehaviour
           
             //change the finger to painted that the arrow is currently hovering over
 
-               fingers[currentOption].sprite = fingerpainted;
+               fingers[currentOption].sprite = fingerPainted;
             
         }
     }

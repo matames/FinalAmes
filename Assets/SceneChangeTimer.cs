@@ -22,10 +22,9 @@ public class SceneChangeTimer : MonoBehaviour
             keyPressed = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0)) { 
-
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
             keyPressed = true;
-
         }
 
         if (keyPressed)
